@@ -1,6 +1,7 @@
 # Proyecto Angular con Firebase – CRUD, Formularios y Componentes  
 **Asignatura:** Programación Avanzada  
-**Estudiante:** *[Tu nombre]*  
+**Estudiantes:** *Job Francesco Goyes Arcalle - Esteban Ramiro Muñiz Pincay - Steven German Caluña Rojas - Sergio Adrian Zambrano Ortiz
+*  
 **Fecha:** *[dd/mm/aaaa]*  
 
 ---
