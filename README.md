@@ -1,8 +1,7 @@
 # Proyecto Angular con Firebase – CRUD, Formularios y Componentes  
 **Asignatura:** Programación Avanzada  
-**Estudiantes:** *Job Francesco Goyes Arcalle - Esteban Ramiro Muñiz Pincay - Steven German Caluña Rojas - Sergio Adrian Zambrano Ortiz
-*  GRUPO 1
-**Fecha:** *[dd/mm/aaaa]*  
+**Estudiantes:** *Job Francesco Goyes Arcalle - Esteban Ramiro Muñiz Pincay - Steven German Caluña Rojas - Sergio Adrian Zambrano Ortiz *  GRUPO 1
+**Fecha:** *[17/11/2025]*  
 
 ---
 
