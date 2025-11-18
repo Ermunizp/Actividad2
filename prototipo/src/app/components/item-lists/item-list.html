@@ -1,0 +1,9 @@
+<div class="item-list">
+  <div *ngFor="let item of items">
+    <p>{{item.name}} - {{item.description}} - {{item.quantity}}</p>
+    <button (click)="editItem(item)">Editar</button>
+    <button (click)="deleteItem(item.id!)">Eliminar</button>
+  </div>
+
+  <app-item-form [item]="selectedItem"></app-item-form>
+</div>

@@ -1,0 +1,87 @@
+<form #form="ngForm" (ngSubmit)="saveItem()" class="item-form">
+
+  <!-- Nombre -->
+  <input 
+    [(ngModel)]="item.name"
+    name="name"
+    placeholder="Nombre"
+    required
+    minlength="3"
+    #nameField="ngModel"
+    class="form-control"
+    [class.is-invalid]="nameField.invalid && nameField.touched"
+  />
+  <div class="error" *ngIf="nameField.invalid && nameField.touched">
+    El nombre es obligatorio (mínimo 3 caracteres).
+  </div>
+
+  <!-- Descripción -->
+  <input
+    [(ngModel)]="item.description"
+    name="description"
+    placeholder="Descripción"
+    required
+    minlength="5"
+    #descField="ngModel"
+    class="form-control"
+    [class.is-invalid]="descField.invalid && descField.touched"
+  />
+  <div class="error" *ngIf="descField.invalid && descField.touched">
+    La descripción es obligatoria (mínimo 5 caracteres).
+  </div>
+
+  <!-- Cantidad -->
+  <input
+    type="number"
+    [(ngModel)]="item.quantity"
+    name="quantity"
+    placeholder="Cantidad"
+    required
+    min="1"
+    #qtyField="ngModel"
+    class="form-control"
+    [class.is-invalid]="qtyField.invalid && qtyField.touched"
+  />
+  <div class="error" *ngIf="qtyField.invalid && qtyField.touched">
+    La cantidad debe ser mayor a 0.
+  </div>
+
+  <!-- Checkbox -->
+  <label>
+    <input
+      type="checkbox"
+      [(ngModel)]="item.available"
+      name="available"
+      (change)="onCheckboxChange($event)"
+    />
+    Disponible
+  </label>
+
+  <!-- Combo box -->
+  <label>
+    Categoría:
+    <select
+      [(ngModel)]="item.category"
+      name="category"
+      required
+      #catField="ngModel"
+      class="form-control"
+      [class.is-invalid]="catField.invalid && catField.touched"
+    >
+      <option value="">-- Seleccione --</option>
+      <option *ngFor="let cat of categories" [value]="cat">{{cat}}</option>
+    </select>
+  </label>
+  <div class="error" *ngIf="catField.invalid && catField.touched">
+    Debe seleccionar una categoría.
+  </div>
+
+  <!-- BOTONES -->
+  <button type="submit" [disabled]="form.invalid" class="btn btn-primary">
+    {{ item.id ? 'Actualizar' : 'Agregar' }}
+  </button>
+
+  <button type="button" class="btn btn-secondary" (click)="resetForm()">
+    Limpiar
+  </button>
+</form>
